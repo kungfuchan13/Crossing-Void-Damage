@@ -1,12 +1,13 @@
 <html>
 Enter the appropriate stats below and click one of the buttons to calculate the missing value. This can be used to simulate how much damage a given attack will do to a target with a given defense stat, or it can be used to determine the defense stat of an enemy given how much damage you deal to them. Since there is rounding in the damage equation, this will be an estimate and may be off by a small amount.<br>
 ATK and DEF should be entered as integers. Skill multiplier, damage modifiers, and final damage modifiers should be entered as decimal values, so a multiplier of 135.5% would become 1.355. Make sure to add 100% to the damage dealt modifier and final damage modifier values before entering them in (no modifier means these should be set to 1).<br>
-ATK can be found in the Party screen by displaying stats (it's a toggle in the setting menu). Use the large value in the middle.<br>
-Enemy DEF is not visible, so you either have to know it or calculate it. This utility allows you to do the latter if you fill in the other information.<br>
-Skill Multiplier can be found by long-pressing the skill in combat or in the Skill menu. If a skill has multiple hits or multiple targets, a fraction of the displayed value is used per hit per target, though the total damage should still be fairly close to one hit of the full value.<br>
-Damage Modifiers are summed across all effects on you and all effects on your target. Some equipment sets apply damage modifiers silently, so make sure to account for that, as well. Also remember that only equipment from the participating attackers take effect. Multi-target attacks treat each target separately.<br>
-Final Damage Modifiers are typically only from equipment. They are summed between both the main and support characters for all attacks, regardless of who is performing the attack.<br>
-Check the PvP box if you are in PvP to apply the 0.3 multiplier.<br>
+ - ATK can be found in the Party screen by displaying stats (it's a toggle in the setting menu). Use the large value in the middle.<br>
+ - Enemy DEF is not visible, so you either have to know it or calculate it. This utility allows you to do the latter if you fill in the other information.<br>
+ - Skill Multiplier can be found by long-pressing the skill in combat or in the Skill menu. If a skill has multiple hits or multiple targets, a fraction of the displayed value is used per hit per target, though the total damage should still be fairly close to one hit of the full value.<br>
+ - Damage Modifiers are summed across all effects on you and all effects on your target. Some equipment sets apply damage modifiers silently, so make sure to account for that, as well. Also remember that only equipment from the participating attackers take effect. Multi-target attacks treat each target separately.<br>
+ - Final Damage Modifiers are typically only from equipment. They are summed between both the main and support characters for all attacks, regardless of who is performing the attack.<br>
+ - Check the PvP box if you are in PvP to apply the 0.3 multiplier.<br>
+ - This utility does not account for Critical damage, so just multiply the end value by your Critical modifier if you wish to test that.<br>
 <br>
 Team ATK: <input id="ATK"><br>
 Enemy DEF: <input id="DEF"><br>
@@ -23,10 +24,10 @@ Damage: <input id="DMG"><br>
 <br>
 This tool allows you to estimate the ATK stat and damage multiplier of a skill an enemy uses. It assumes you are being hit by the same attack by an enemy with the same ATK stat, so weird things may happen if you don't do that. Same as above, this is just an estimate, so it is best to take multiple points of data to ensure the value is as correct as possible.<br>
 To use this tool, record the following values for two instances of the same attack from the same enemy. You must have two different DEF values for each trial, or else the tool will be unable to perform the calculations.<br>
-DEF can be found the same way as ATK. Remember to account for the damage type. Physical displays red numbers, Arcane displays blue.<br>
-The Damage Dealt Modifier in this case refers to those applied to the enemy's attack. Remember to check the opponent's buffs and your own damage taken modifiers. Some equipment may silently reduce your damage taken, so make sure to account for that, as well.<br>
-Remember to add your own Final Damage Taken modifiers to the bonus. Same as Final Damage dealt, they stack across both main and support characters in a team. They stack additively, same as other effects, so a 4% reduction would correspond to a 96% multiplier, or 0.96.<br>
-This utility can not account for Critical damage, so you may have to retest if the opponent lands a Critical hit.<br>
+ - DEF can be found the same way as ATK. Remember to account for the damage type. Physical displays red numbers, Arcane displays blue.<br>
+ - The Damage Dealt Modifier in this case refers to those applied to the enemy's attack. Remember to check the opponent's buffs and your own damage taken modifiers. Some equipment may silently reduce your damage taken, so make sure to account for that, as well.<br>
+ - Remember to add your own Final Damage Taken modifiers to the bonus. Same as Final Damage dealt, they stack across both main and support characters in a team. They stack additively, same as other effects, so a 4% reduction would correspond to a 96% multiplier, or 0.96.<br>
+ - This utility can not account for Critical damage, so you may have to retest if the opponent lands a Critical hit.<br>
 <br>
 <br>
 DEF 1: <input id="defence1"><br>
